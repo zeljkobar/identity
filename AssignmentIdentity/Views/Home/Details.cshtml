@@ -1,0 +1,10 @@
+﻿@model Car
+
+
+<h1>@Model.Marka @Model.Model</h1>
+<img src="/img/@Model.Fotografija" alt="@Model.Fotografija" />
+<h3>Godina proizvodnje: @Model.Godiste</h3>
+<h3>Zapremina motora: @Model.ZapreminaMotora Snaga: @Model.Snaga</h3>
+<h3>Gorivo: @ViewData["Gorivo"]</h3>
+<p>@Model.Opis</p>
+<span class="bg-primary font-weight-bolder">kontakt @Model.Kontakt</span>
