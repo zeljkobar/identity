@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using AssignmentIdentity.Data;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,9 +9,9 @@ namespace AssignmentIdentity.Models
 {
     public class CarRepository:ICarRepository
     {
-        private readonly AppDbContext appDbContext;
+        private readonly ApplicationDbContext appDbContext;
 
-        public CarRepository(AppDbContext appDbContext)
+        public CarRepository(ApplicationDbContext appDbContext)
         {
             this.appDbContext = appDbContext;
         }

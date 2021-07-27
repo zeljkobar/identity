@@ -33,9 +33,10 @@ namespace AssignmentIdentity
                     Configuration.GetConnectionString("DefaultConnection")));
             services.AddDatabaseDeveloperPageExceptionFilter();
 
+            services.AddScoped<ICarRepository, CarRepository>();
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
-            services.AddScoped<ICarRepository, CarRepository>();
+           // services.AddScoped<ICarRepository, CarRepository>();
 
             services.AddControllersWithViews();
         }
