@@ -1,5 +1,6 @@
 ﻿using AssignmentIdentity.Models;
 using AssignmentIdentity.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -64,6 +65,12 @@ namespace AssignmentIdentity.Controllers
 
             }
             return View();
+        }
+        [Authorize]
+        public IActionResult Delete (int id)
+        {
+            carRepository.DeleteCar(id);
+            return RedirectToAction("Index");
         }
         public IActionResult ONama()
         {

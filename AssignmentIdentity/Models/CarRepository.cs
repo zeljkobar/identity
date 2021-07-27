@@ -35,6 +35,13 @@ namespace AssignmentIdentity.Models
             }
         }
 
+        public void DeleteCar(int CarId)
+        {
+            var car = appDbContext.Cars.FirstOrDefault(c => c.Id == CarId);
+            appDbContext.Cars.Remove(car);
+            appDbContext.SaveChanges();
+        }
+
         public Car GetCarById(int carId)
         {
             var car = appDbContext.Cars.FirstOrDefault(c => c.Id == carId);

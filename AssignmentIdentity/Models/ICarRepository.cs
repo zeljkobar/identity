@@ -11,5 +11,7 @@ namespace AssignmentIdentity.Models
         Car GetCarById(int carId);
 
         public void AddCar(Car car);
+
+        public void DeleteCar(int CarId);
     }
 }
