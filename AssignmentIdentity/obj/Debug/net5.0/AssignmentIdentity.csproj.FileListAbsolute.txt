@@ -395,3 +395,5 @@ C:\Users\zeljk\source\repos\AssignmentIdentity\AssignmentIdentity\obj\Debug\net5
 C:\Users\zeljk\source\repos\AssignmentIdentity\AssignmentIdentity\obj\Debug\net5.0\Razor\Views\Home\Details.cshtml.g.cs
 C:\Users\zeljk\source\repos\AssignmentIdentity\AssignmentIdentity\obj\Debug\net5.0\Razor\Views\Home\Kontakt.cshtml.g.cs
 C:\Users\zeljk\source\repos\AssignmentIdentity\AssignmentIdentity\obj\Debug\net5.0\Razor\Views\Home\ONama.cshtml.g.cs
+C:\Users\zeljk\source\repos\AssignmentIdentity\AssignmentIdentity\obj\Debug\net5.0\AssignmentIdentity.csproj.GenerateResource.cache
+C:\Users\zeljk\source\repos\AssignmentIdentity\AssignmentIdentity\obj\Debug\net5.0\AssignmentIdentity.Resources.Resource.resources

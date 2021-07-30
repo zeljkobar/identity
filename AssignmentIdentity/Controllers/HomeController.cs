@@ -3,6 +3,7 @@ using AssignmentIdentity.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Localization;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
@@ -18,13 +19,14 @@ namespace AssignmentIdentity.Controllers
         private readonly ILogger<HomeController> _logger;
         private readonly ICarRepository carRepository;
         private readonly IHostingEnvironment hostingEnviroment;
+        public IStringLocalizer<Resource> localizer;
 
-
-        public HomeController(ILogger<HomeController> logger, ICarRepository carRepository, IHostingEnvironment hostingEnviroment)
+        public HomeController(ILogger<HomeController> logger, ICarRepository carRepository, IHostingEnvironment hostingEnviroment, IStringLocalizer<Resource> localizer)
         {
             _logger = logger;
             this.carRepository = carRepository;
             this.hostingEnviroment = hostingEnviroment;
+            this.localizer = localizer;
         }
 
         public IActionResult Index()
@@ -32,7 +34,9 @@ namespace AssignmentIdentity.Controllers
             CarListViewModel carListViewModel = new CarListViewModel()
             {
                 Cars = carRepository.AllCars
+
             };
+            ViewBag.proba = localizer["test"];
             return View(carListViewModel);
         }
 

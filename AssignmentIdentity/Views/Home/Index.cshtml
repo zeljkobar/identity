@@ -10,7 +10,7 @@
     {
         <div class="col-sm-4 col-lg-4 col-md-4">
             <div class="card">
-                <img src="/img/@car.Fotografija" alt="@car.Fotografija" class="img-thumbnail" style="height:200px"/>
+                <img src="/img/@car.Fotografija" alt="@car.Fotografija" class="img-thumbnail" style="height:200px" />
 
                 <div class="card-body">
 
@@ -21,7 +21,7 @@
                         <a asp-controller="Home" asp-action="Details" asp-route-id="@car.Id">@car.Marka @car.Model</a>
                     </h3>
                     <p>@car.Opis</p>
-                    
+
                 </div>
                 <a type="button" asp-controller="Home" asp-action="Delete" asp-route-id="@car.Id" class="btn btn-danger">Izbrisi</a>
             </div>
@@ -29,3 +29,4 @@
 
     }
 </div>
+@ViewBag.proba

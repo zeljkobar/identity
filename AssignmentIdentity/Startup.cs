@@ -39,11 +39,14 @@ namespace AssignmentIdentity
            // services.AddScoped<ICarRepository, CarRepository>();
 
             services.AddControllersWithViews();
+            services.AddLocalization(opts => opts.ResourcesPath = "Resources");
+            services.AddMvc().AddDataAnnotationsLocalization(opts => { opts.DataAnnotationLocalizerProvider = (type, factory) => factory.Create(typeof(Resource)); }).SetCompatibilityVersion(Microsoft.AspNetCore.Mvc.CompatibilityVersion.Latest);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
